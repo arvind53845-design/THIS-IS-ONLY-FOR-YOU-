@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arvind's Music World</title>
+<style>
+:root{--bg:#090b14;--card:#151827;--pink:#ff5c9a;--purple:#8c6bff;--text:#f7f7fb;--muted:#aeb3c7}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 0%,#302052 0,transparent 38%),radial-gradient(circle at 95% 30%,#41203e 0,transparent 32%),var(--bg);min-height:100vh}
+.wrap{max-width:850px;margin:auto;padding:22px 16px 40px}header{display:flex;align-items:center;gap:12px;margin:8px 0 24px}.logo{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--purple));font-size:25px}
+h1{font-size:clamp(24px,5vw,36px);margin:0}.sub{color:var(--muted);margin-top:4px;font-size:14px}.hero{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+.cover{min-height:280px;border-radius:24px;overflow:hidden;background:linear-gradient(145deg,#ff5c9a,#7c5cff 55%,#121528);position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+.cover:before,.cover:after{content:"";position:absolute;border:1px solid #ffffff40;border-radius:50%;width:210px;height:210px}.cover:after{width:280px;height:280px}
+.disc{width:150px;height:150px;border-radius:50%;background:repeating-radial-gradient(circle,#171a2c 0 5px,#292d45 6px 8px);display:grid;place-items:center;box-shadow:0 16px 35px #0007;z-index:1}.disc span{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#fff,#ffb9d4);display:grid;place-items:center;color:#27203b;font-size:20px}
+.coverlabel{position:absolute;bottom:20px;left:15px;right:15px;z-index:2;font-weight:800;font-size:20px;text-shadow:0 2px 8px #0008}.panel,.player{background:#151827ef;border:1px solid #ffffff18;border-radius:24px;padding:22px}
+h2{font-size:20px;margin:0 0 8px}p{color:var(--muted);line-height:1.5;font-size:14px}label{display:block;font-size:13px;color:#d7d9e6;margin:16px 0 7px}
+input{width:100%;padding:12px;border-radius:12px;border:1px solid #3b4058;background:#0d1020;color:#fff;font-size:14px}button{border:0;border-radius:12px;padding:12px 15px;font-weight:750;background:linear-gradient(100deg,var(--pink),var(--purple));color:white;cursor:pointer}.full{width:100%;margin-top:10px}.hint{font-size:12px;color:#9ca3ba}
+.player{margin-top:18px}.songtitle{font-weight:700;margin:12px 0}#youtubeBox{margin-top:14px;display:none}iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:14px}audio{width:100%;margin-top:12px}.footer{text-align:center;color:#8e94ad;font-size:12px;margin-top:24px}
+@media(max-width:620px){.hero{grid-template-columns:1fr}.cover{min-height:230px}.panel{padding:18px}}
+</style></head><body><div class="wrap">
+<header><div class="logo">♫</div><div><h1>Arvind's Music World</h1><div class="sub">Your songs. Your mood. Your world. 💗</div></div></header>
+<section class="hero"><div class="cover" role="img" aria-label="Music cover artwork"><div class="disc"><span>♫</span></div><div class="coverlabel">MUSIC • VIBES • YOU</div></div>
+<div class="panel"><h2>Welcome to my music world 🎧</h2><p>Apna favourite gaana sunne ke liye YouTube ka song link neeche paste karein. Vocal wala original song/video chalane ke liye uska YouTube link use karein.</p>
+<label for="ytlink">YouTube song link</label><input id="ytlink" type="url" placeholder="https://www.youtube.com/watch?v=..."><button class="full" onclick="playYouTube()">▶ Play Song</button><div class="hint" style="margin-top:10px">YouTube par gaane ka video kholen → Share → Copy link.</div></div></section>
+<section class="player"><h2>🎶 Now Playing</h2><div id="songtitle" class="songtitle">Apna song link paste karke Play Song dabayein</div>
+<div id="youtubeBox"><iframe id="ytplayer" title="YouTube music player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<label for="audiofile">Ya phone se apni audio file chalao (MP3, M4A, WAV)</label><input id="audiofile" type="file" accept="audio/*" onchange="playLocalAudio(event)"><audio id="localplayer" controls style="display:none"></audio>
+<p class="hint">Phone se select ki gayi audio sirf us device/browser par chalegi. Website ke visitors ke liye YouTube link use karein.</p></section><div class="footer">Made with ♡ by Arvind</div></div>
+<script>
+function getVideoId(url){try{const u=new URL(url);if(u.hostname.includes('youtu.be'))return u.pathname.slice(1).split('/')[0];if(u.hostname.includes('youtube.com')){if(u.pathname==='/watch')return u.searchParams.get('v');const p=u.pathname.split('/').filter(Boolean);if(['embed','shorts','live'].includes(p[0]))return p[1]}}catch(e){}return null}
+function playYouTube(){const url=document.getElementById('ytlink').value.trim(),id=getVideoId(url);if(!id){alert('Valid YouTube song link paste karein.');return}document.getElementById('localplayer').pause();document.getElementById('localplayer').style.display='none';document.getElementById('ytplayer').src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&rel=0';document.getElementById('youtubeBox').style.display='block';document.getElementById('songtitle').textContent='YouTube song is ready 🎵'}
+function playLocalAudio(e){const f=e.target.files&&e.target.files[0];if(!f)return;const p=document.getElementById('localplayer');document.getElementById('ytplayer').src='';document.getElementById('youtubeBox').style.display='none';p.src=URL.createObjectURL(f);p.style.display='block';p.play();document.getElementById('songtitle').textContent=f.name}
+</script></body></html>
