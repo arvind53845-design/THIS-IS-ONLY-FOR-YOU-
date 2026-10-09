@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d16">
+<title>This is only for you ❤️</title>
+<style>
+:root{--bg:#070b12;--panel:#101722;--panel2:#151e2b;--text:#f4f6fb;--muted:#9ba8ba;--pink:#ff3267;--line:#253142}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(140deg,#090e17,#05080e 70%);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+button,input{font:inherit}button{cursor:pointer}.app{min-height:100vh;padding-bottom:100px}.top{height:72px;display:flex;align-items:center;gap:20px;padding:0 24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#080d12ee;backdrop-filter:blur(16px);z-index:5}.brand{font-size:22px;font-weight:750;white-space:nowrap}.brand span{color:var(--pink)}.search{flex:1;max-width:480px;margin-left:22px}.search input{width:100%;background:#151e2b;border:1px solid #2b394c;border-radius:24px;padding:12px 16px;color:white;outline:none}.toplinks{margin-left:auto;display:flex;gap:10px}.btn{border:1px solid #344155;color:#eaf0f9;background:#151e2b;padding:9px 14px;border-radius:22px}.btn.primary{background:var(--pink);border-color:var(--pink);color:white}.layout{display:grid;grid-template-columns:210px 1fr;gap:20px;padding:20px}.sidebar{border-right:1px solid var(--line);padding-right:14px}.nav{display:block;text-align:left;width:100%;border:0;background:transparent;color:#bdc7d5;padding:12px;border-radius:10px;margin-bottom:4px}.nav.active,.nav:hover{background:#291622;color:#ff668c}.sidehead{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:22px 12px 8px}.main{min-width:0}.hero{min-height:250px;border-radius:20px;padding:34px;display:flex;align-items:center;background:radial-gradient(circle at 75% 35%,#a83d65 0,transparent 25%),linear-gradient(115deg,#142b48,#542c58 55%,#e25b70);overflow:hidden;position:relative}.hero:after{content:"♫";position:absolute;right:9%;font-size:190px;opacity:.14;font-weight:900}.hero h1{font-size:clamp(30px,4vw,48px);line-height:1.08;margin:8px 0 14px;max-width:600px}.hero p{color:#f2dce8}.hero .btn{margin-top:10px}.section{margin-top:26px}.sectionhead{display:flex;align-items:end;justify-content:space-between;margin-bottom:13px}.sectionhead h2{margin:0;font-size:21px}.sectionhead p{margin:2px 0 0;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}.card{background:var(--panel);padding:10px;border:1px solid #1e2a39;border-radius:13px;min-width:0;transition:.15s}.card:hover{transform:translateY(-2px);background:#172130}.cover{aspect-ratio:1;background:linear-gradient(135deg,#ed5b7b,#39285c);border-radius:9px;display:grid;place-items:center;font-size:42px;margin-bottom:9px}.card:nth-child(3n) .cover{background:linear-gradient(135deg,#d88a40,#402d36)}.card:nth-child(3n+1) .cover{background:linear-gradient(135deg,#126c86,#252d5b)}.title{font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.artist{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cardactions{display:flex;gap:7px;margin-top:9px}.smallbtn{background:#222e3e;border:0;color:white;border-radius:8px;padding:7px 10px}.smallbtn.like{margin-left:auto}.empty{color:var(--muted);padding:22px;background:var(--panel);border-radius:12px}.player{position:fixed;bottom:0;left:0;right:0;z-index:10;background:#0b111bed;border-top:1px solid #293648;display:grid;grid-template-columns:1fr 1.5fr 1fr;align-items:center;gap:20px;padding:12px 22px}.now{display:flex;align-items:center;gap:12px;min-width:0}.mini{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#ec5b7b,#30295a);display:grid;place-items:center;font-size:24px}.controls{text-align:center}.controlrow{display:flex;align-items:center;justify-content:center;gap:14px}.controlrow button{border:0;background:transparent;color:#eaf0f9;font-size:19px}.controlrow .play{background:var(--pink);border-radius:50%;width:40px;height:40px;color:white}.progress{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:11px;margin-top:7px}.progress input{width:100%;accent-color:var(--pink)}.volume{text-align:right}.notice{font-size:12px;color:var(--muted);margin-top:8px}.modal{display:none;position:fixed;inset:0;background:#000b;z-index:20;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modalbox{width:min(420px,100%);background:#111a27;border:1px solid #354256;border-radius:18px;padding:24px}.modalbox input{width:100%;padding:12px;margin:7px 0 12px;background:#080e17;border:1px solid #354256;border-radius:9px;color:white}.modalbox h2{margin-top:0}.row{display:flex;gap:8px;flex-wrap:wrap}@media(max-width:900px){.layout{grid-template-columns:1fr;padding:12px}.sidebar{display:flex;gap:4px;overflow:auto;border:0;padding:0}.nav{white-space:nowrap;width:auto}.sidehead{display:none}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.top{padding:0 12px;gap:8px}.brand{font-size:17px}.search{margin-left:0}.toplinks .btn:not(.primary){display:none}.player{grid-template-columns:1fr 1.4fr;padding:9px 12px}.volume{display:none}}@media(max-width:520px){.top{flex-wrap:wrap;height:auto;padding:12px}.brand{width:100%}.search{max-width:none;flex:1}.toplinks{margin-left:0}.hero{padding:22px;min-height:230px}.hero:after{right:-8%;font-size:130px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.player{grid-template-columns:1fr}.controls{grid-row:2}.now{display:none}.layout{gap:12px}.sectionhead h2{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+  <div class="brand">♫ <span>This is only for you</span> ❤️</div>
+  <div class="search"><input id="search" placeholder="Search songs, artists, moods…" aria-label="Search songs"></div>
+  <div class="toplinks"><button class="btn" id="libraryBtn">My Library</button><button class="btn primary" id="accountBtn">Sign in / Join</button></div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+  <button class="nav active" data-filter="all">⌂ &nbsp; Home</button>
+  <button class="nav" data-filter="trending">♨ &nbsp; Trending</button>
+  <button class="nav" data-filter="liked">♡ &nbsp; Liked Songs</button>
+  <button class="nav" data-filter="playlist">♫ &nbsp; My Playlist</button>
+  <div class="sidehead">Explore moods</div>
+  <button class="nav" data-genre="Hindi">♪ &nbsp; Hindi</button>
+  <button class="nav" data-genre="Punjabi">♪ &nbsp; Punjabi</button>
+  <button class="nav" data-genre="English">♪ &nbsp; English</button>
+  <button class="nav" data-genre="Chill">☾ &nbsp; Chill vibes</button>
+  <div class="notice">Listen without an account, or sign in to save your favourites on this device.</div>
+</aside>
+<main class="main">
+  <section class="hero"><div><div>YOUR MUSIC, YOUR MOOD</div><h1>Good music.<br>Just for you. ❤️</h1><p>Discover tracks, find your vibe, and make every moment yours.</p><button class="btn primary" id="startBtn">▶ Start listening</button></div></section>
+  <section class="section"><div class="sectionhead"><div><h2>Popular moods</h2><p>Pick a vibe for right now</p></div></div><div class="row" id="moods">
+  <button class="btn" data-mood="Hindi">🎤 Hindi</button><button class="btn" data-mood="Punjabi">🪘 Punjabi</button><button class="btn" data-mood="English">🌎 English</button><button class="btn" data-mood="Chill">🌙 Chill</button><button class="btn" data-mood="Love">💗 Love</button>
+  </div></section>
+  <section class="section"><div class="sectionhead"><div><h2 id="listHeading">A little something for you</h2><p>Sample tracks to test the music player</p></div><button class="btn" id="clearFilter">Show all</button></div><div class="grid" id="songGrid"></div><div id="empty" class="empty" hidden>No songs found here. Try another search or show all songs.</div></section>
+  <section class="section"><div class="sectionhead"><div><h2>Your library</h2><p>Liked tracks saved on this device</p></div></div><div id="library" class="empty">Sign in is optional. Like a song to see it here.</div></section>
+  <p class="notice">Important: this starter site uses sample audio only. Before publishing a large catalogue, add music you own, licensed tracks, or audio with permission. This demo's sign-in is local-device only, not a secure real account system.</p>
+</main>
+</div>
+</div>
+<footer class="player">
+  <div class="now"><div class="mini" id="playerArt">♫</div><div style="min-width:0"><div class="title" id="nowTitle">Choose a track</div><div class="artist" id="nowArtist">This is only for you ❤️</div></div></div>
+  <div class="controls"><div class="controlrow"><button id="prevBtn" title="Previous">⏮</button><button class="play" id="playBtn" title="Play">▶</button><button id="nextBtn" title="Next">⏭</button></div><div class="progress"><span id="currentTime">0:00</span><input id="seek" type="range" min="0" max="100" value="0"><span id="duration">0:00</span></div></div>
+  <div class="volume"><label class="notice">Volume&nbsp; <input id="volume" type="range" min="0" max="1" step=".05" value=".8" style="accent-color:var(--pink);vertical-align:middle;width:100px"></label></div>
+</footer>
+<audio id="audio" preload="metadata"></audio>
+<div class="modal" id="accountModal"><div class="modalbox"><h2>Welcome ❤️</h2><p>Listen without signing in, or enter a display name to personalise this demo on this device.</p><label for="username">Your display name</label><input id="username" placeholder="e.g. Music lover"><div class="row"><button class="btn primary" id="saveAccount">Continue</button><button class="btn" id="closeModal">Maybe later</button></div><p class="notice">This is not a real secure login. A production account system needs a backend.</p></div></div>
+<script>
+const demoAudio = [
+ {id:1,title:"Sunny Afternoon",artist:"Sample Audio",genre:"Chill",emoji:"☀️",url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"},
+ {id:2,title:"Midnight Drive",artist:"Sample Audio",genre:"English",emoji:"🌃",url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"},
+ {id:3,title:"Golden Hour",artist:"Sample Audio",genre:"Hindi",emoji:"🌅",url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"},
+ {id:4,title:"City Lights",artist:"Sample Audio",genre:"Punjabi",emoji:"🌆",url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"},
+ {id:5,title:"Soft Memories",artist:"Sample Audio",genre:"Love",emoji:"💗",url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"},
+ {id:6,title:"Ocean Breeze",artist:"Sample Audio",genre:"Chill",emoji:"🌊",url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"},
+ {id:7,title:"New Beginnings",artist:"Sample Audio",genre:"English",emoji:"✨",url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"},
+ {id:8,title:"Rainy Evening",artist:"Sample Audio",genre:"Hindi",emoji:"🌧️",url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"},
+ {id:9,title:"Feel Good",artist:"Sample Audio",genre:"Punjabi",emoji:"🎧",url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"},
+ {id:10,title:"Starlight",artist:"Sample Audio",genre:"Love",emoji:"🌌",url:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3"}
+];
+const audio=document.getElementById('audio'), grid=document.getElementById('songGrid');
+let current=null, filter='all', genre='', query='', liked=JSON.parse(localStorage.getItem('tofy-liked')||'[]'), username=localStorage.getItem('tofy-name')||'';
+const fmt=s=>{if(!isFinite(s))return '0:00';return Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0')};
+function render(){
+ let list=demoAudio.filter(s=>(!query||(s.title+' '+s.artist+' '+s.genre).toLowerCase().includes(query))&&(!genre||s.genre===genre)&&(filter!=='trending'||s.id<=5)&&(filter!=='liked'||liked.includes(s.id))&&(filter!=='playlist'||liked.includes(s.id)));
+ document.getElementById('listHeading').textContent=filter==='liked'?'Liked songs':filter==='playlist'?'My playlist':genre?genre+' songs':query?'Search results':filter==='trending'?'Trending sample tracks':'A little something for you';
+ grid.innerHTML=list.map(s=>`<article class="card"><div class="cover">${s.emoji}</div><div class="title" title="${s.title}">${s.title}</div><div class="artist">${s.artist} · ${s.genre}</div><div class="cardactions"><button class="smallbtn" data-play="${s.id}">▶ Play</button><button class="smallbtn like" data-like="${s.id}">${liked.includes(s.id)?'♥':'♡'}</button></div></article>`).join('');
+ document.getElementById('empty').hidden=!!list.length;
+ const likedList=demoAudio.filter(s=>liked.includes(s.id));
+ document.getElementById('library').innerHTML=likedList.length?likedList.map(s=>`<button class="btn" data-play="${s.id}" style="margin:4px">▶ ${s.title}</button>`).join(''):'Like a song to save it here on this device.';
+ document.querySelectorAll('[data-play]').forEach(b=>b.onclick=()=>playSong(+b.dataset.play));
+ document.querySelectorAll('[data-like]').forEach(b=>b.onclick=()=>{const id=+b.dataset.like;liked=liked.includes(id)?liked.filter(x=>x!==id):[...liked,id];localStorage.setItem('tofy-liked',JSON.stringify(liked));render()});
+}
+function playSong(id){current=demoAudio.find(s=>s.id===id);audio.src=current.url;audio.play().then(()=>document.getElementById('playBtn').textContent='❚❚').catch(()=>{document.getElementById('nowArtist').textContent='Could not load sample audio. Check internet and try again.';document.getElementById('playBtn').textContent='▶'});document.getElementById('nowTitle').textContent=current.title;document.getElementById('nowArtist').textContent=current.artist+' · '+current.genre;document.getElementById('playerArt').textContent=current.emoji}
+document.getElementById('playBtn').onclick=()=>{if(!current)return playSong(1);if(audio.paused)audio.play().then(()=>document.getElementById('playBtn').textContent='❚❚');else{audio.pause();document.getElementById('playBtn').textContent='▶'}};
+document.getElementById('nextBtn').onclick=()=>playSong(current?current.id%demoAudio.length+1:1);
+document.getElementById('prevBtn').onclick=()=>playSong(current?((current.id+demoAudio.length-2)%demoAudio.length)+1:1);
+document.getElementById('startBtn').onclick=()=>playSong(1);
+audio.ontimeupdate=()=>{document.getElementById('currentTime').textContent=fmt(audio.currentTime);document.getElementById('duration').textContent=fmt(audio.duration);document.getElementById('seek').value=audio.duration?audio.currentTime/audio.duration*100:0};
+document.getElementById('seek').oninput=e=>{if(audio.duration)audio.currentTime=audio.duration*e.target.value/100};
+document.getElementById('volume').oninput=e=>audio.volume=+e.target.value;audio.volume=.8;
+audio.onended=()=>document.getElementById('nextBtn').click();
+document.getElementById('search').oninput=e=>{query=e.target.value.toLowerCase().trim();filter='all';genre='';render()};
+document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;genre='';document.querySelectorAll('.nav').forEach(n=>n.classList.remove('active'));b.classList.add('active');render()});
+document.querySelectorAll('[data-genre]').forEach(b=>b.onclick=()=>{genre=b.dataset.genre;filter='all';render()});
+document.querySelectorAll('[data-mood]').forEach(b=>b.onclick=()=>{genre=b.dataset.mood;filter='all';render()});
+document.getElementById('clearFilter').onclick=()=>{filter='all';genre='';query='';document.getElementById('search').value='';render()};
+const modal=document.getElementById('accountModal');
+document.getElementById('accountBtn').onclick=()=>{document.getElementById('username').value=username;modal.classList.add('show')};
+document.getElementById('libraryBtn').onclick=()=>document.getElementById('library').scrollIntoView({behavior:'smooth',block:'center'});
+document.getElementById('closeModal').onclick=()=>modal.classList.remove('show');
+document.getElementById('saveAccount').onclick=()=>{username=document.getElementById('username').value.trim();if(username){localStorage.setItem('tofy-name',username);document.getElementById('accountBtn').textContent='Hi, '+username;modal.classList.remove('show')}};
+if(username)document.getElementById('accountBtn').textContent='Hi, '+username;
+render();
+</script>
+</body>
+</html>
